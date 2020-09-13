@@ -17,7 +17,7 @@ df_dhameli = pd.DataFrame({'Date': date})
 #converting data_raw DataFrame into format that we can use for SIR algorithm
 for each in country_list:
     df_dhameli[each] = np.array(data_raw[data_raw['Country/Region'] == each].iloc[:,4::].sum(axis=0)).T
-df_dhameli.to_csv("C:/Users/dhame/ds_covid-19/data/processed/SIR.csv", sep = ';', index=False)
+df_dhameli.to_csv("C:/Users/BRIJESH/ds_covid-19/data/processed/SIR.csv", sep = ';', index=False)
 
 df_analyse=pd.read_csv('C:/Users/BRIJESH/ds_covid-19/data/processed/SIR.csv',sep=';')
 df_analyse.sort_values('Date',ascending=True).head()
@@ -62,4 +62,4 @@ for country in df_data.columns[1:]:
 
 df_data = df_data.reset_index(drop=True)
 #save CSV file to local drive for future use
-df_data.to_csv('C:/Users/dhame/ds_covid-19/data/processed/SIR_fitted.csv', sep = ';')
+df_data.to_csv('C:/Users/BRIJESH/ds_covid-19/data/processed/SIR_fitted.csv', sep = ';')
