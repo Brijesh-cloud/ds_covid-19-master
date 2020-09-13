@@ -12,12 +12,12 @@ pd.set_option('display.max_rows', 500)
 data_raw = pd.read_csv('C:/Users/BRIJESH/ds_covid-19/data/raw/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
 country_list = data_raw['Country/Region'].unique() #making country_list
 date = data_raw.columns[4:]
-df_dhameli = pd.DataFrame({'Date': date})
+df_dhol = pd.DataFrame({'Date': date})
 
 #converting data_raw DataFrame into format that we can use for SIR algorithm
 for each in country_list:
-    df_dhameli[each] = np.array(data_raw[data_raw['Country/Region'] == each].iloc[:,4::].sum(axis=0)).T
-df_dhameli.to_csv("C:/Users/BRIJESH/ds_covid-19/data/processed/SIR.csv", sep = ';', index=False)
+    df_dhol[each] = np.array(data_raw[data_raw['Country/Region'] == each].iloc[:,4::].sum(axis=0)).T
+df_dhol.to_csv("C:/Users/BRIJESH/ds_covid-19/data/processed/SIR.csv", sep = ';', index=False)
 
 df_analyse=pd.read_csv('C:/Users/BRIJESH/ds_covid-19/data/processed/SIR.csv',sep=';')
 df_analyse.sort_values('Date',ascending=True).head()
