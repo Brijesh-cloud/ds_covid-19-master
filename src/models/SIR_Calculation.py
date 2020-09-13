@@ -56,7 +56,7 @@ for country in df_data.columns[1:]:
         fit_odeint_func(t, *popt)
         popt, pcov = optimize.curve_fit(fit_odeint_func, t, ydata, maxfev=5000)
         perr = np.sqrt(np.diag(pcov))
-        fitted=fit_odeint_func(t, *popt)
+        fitted= fit_odeint_func(t, *popt)
         fitted_pad = np.concatenate((np.zeros(df_data.shape[0]-len(fitted)) ,fitted)) # concatenate fitted and padded array into list
         df_data[country + '_fitted'] = fitted_pad
 
