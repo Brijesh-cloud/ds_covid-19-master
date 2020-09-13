@@ -10,7 +10,7 @@ import json
 #define a function to gather data from johns hopkins by doing git_pull
 def get_johns_hopkins_data():
     git_pull = subprocess.Popen('git pull',
-                         cwd = os.path.dirname('C:/Users/dhame/ds_covid-19/data/raw/COVID-19/'),
+                         cwd = os.path.dirname('C:/Users/BRIJESH/ds_covid-19/data/raw/COVID-19/'),
                          shell = True,stdout = subprocess.PIPE,stderr = subprocess.PIPE )
     (out, error) = git_pull.communicate()
     print("Error : " + str(error))
