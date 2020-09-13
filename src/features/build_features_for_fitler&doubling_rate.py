@@ -1,4 +1,4 @@
-#importing required packageas
+# import required packageas
 import numpy as np
 from sklearn import linear_model
 reg = linear_model.LinearRegression(fit_intercept=True)
