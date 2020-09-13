@@ -1,4 +1,4 @@
-# importing required python packages
+# import required python packages
 import os
 import pandas as pd
 import numpy as np
@@ -9,7 +9,7 @@ from scipy import integrate
 #setting parameters for DataFrame
 pd.set_option('display.max_rows', 500)
 #importing data frame
-data_raw = pd.read_csv('C:/Users/dhame/ds_covid-19/data/raw/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
+data_raw = pd.read_csv('C:/Users/BRIJESH/ds_covid-19/data/raw/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
 country_list = data_raw['Country/Region'].unique() #making country_list
 date = data_raw.columns[4:]
 df_dhameli = pd.DataFrame({'Date': date})
@@ -19,7 +19,7 @@ for each in country_list:
     df_dhameli[each] = np.array(data_raw[data_raw['Country/Region'] == each].iloc[:,4::].sum(axis=0)).T
 df_dhameli.to_csv("C:/Users/dhame/ds_covid-19/data/processed/SIR.csv", sep = ';', index=False)
 
-df_analyse=pd.read_csv('C:/Users/dhame/ds_covid-19/data/processed/SIR.csv',sep=';')
+df_analyse=pd.read_csv('C:/Users/BRIJESH/ds_covid-19/data/processed/SIR.csv',sep=';')
 df_analyse.sort_values('Date',ascending=True).head()
 
 # Intialize parameter
