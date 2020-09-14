@@ -5,7 +5,7 @@ Data science project @ TU_KL on covid-19 dataset
 
 The goal of this project is to create dynamic dashboard for final submission of Enterprise Data science lecture at TU KL by deploying the best practices of data science from the industry while developing a COVID-19 analysis prototype.
 
-The final output contains a dashboard of COVID-19 data with filtered and calculated data sets of infected people of different countries around the world, as per the past data we have.
+The final output contains a dashboard of COVID-19 data with filtered and calculated data sets of infected people of different countries around the world, as per the current base.
 
 Techniques and python packages used are GITHUB repository, REST Services, and Python Pandas, matplotlib, Scipy, scikit-learn, Facebook Prophet, Plotly, Dash, + bonus section Tableau respectively.
 
